@@ -1,0 +1,17 @@
+{
+  "output_root": "../origin_score_results_new_run",
+  "random_seed": 20261009,
+  "validation": {"outer_folds": 5, "inner_folds": 4},
+  "origin": {"interop_dll": "D:/origin2021/Interop.Origin.dll", "executable": "D:/origin2021/Origin64.exe"},
+  "datasets": [
+    {
+      "key": "your_task",
+      "title": "你的实验任务名称",
+      "source": {"type": "origin", "path": "YOUR_PROJECT.opju", "worksheet": "[YOUR_BOOK]Plot Data1"},
+      "input_kind": "existing_pca",
+      "feature_columns": ["I", "J"],
+      "label_column": "K",
+      "feature_selection_basis": "Existing PC1/PC2 scores; verify the worksheet columns and original category mapping before running."
+    }
+  ]
+}

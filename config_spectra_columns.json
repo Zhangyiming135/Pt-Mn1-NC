@@ -1,0 +1,18 @@
+{
+  "output_root": "../spectra_results_new_run",
+  "random_seed": 20261009,
+  "datasets": [
+    {
+      "key": "spectra_task",
+      "title": "光谱矩阵分类",
+      "source": {"type": "table", "path": "YOUR_SPECTRA.xlsx", "sheet": "Spectra"},
+      "orientation": "samples_in_columns",
+      "feature_axis_column": "Wavelength_nm",
+      "sample_columns": ["YOUR_SAMPLE_1", "YOUR_SAMPLE_2", "YOUR_SAMPLE_3"],
+      "metadata": {"path": "YOUR_SAMPLE_RECORDS.xlsx", "sheet": "Samples", "sample_column": "Sample_ID"},
+      "label_column": "True_Class",
+      "preparation_group_column": "Preparation_ID",
+      "input_kind": "raw_features"
+    }
+  ]
+}

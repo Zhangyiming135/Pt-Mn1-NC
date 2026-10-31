@@ -1,0 +1,45 @@
+{
+  "output_root": "../results_new_run",
+  "random_seed": 20261009,
+  "algorithms": ["LDA", "SVM"],
+  "validation": {"outer_folds": 5, "inner_folds": 4},
+  "preprocessing": {"missing": "error", "scale": "standard", "select_k": null, "pca_components": null},
+  "lda": {"solver": "svd", "shrinkage": null},
+  "svm": {"kernel": "rbf", "C_grid": [0.1, 1, 10, 100], "gamma_grid": ["scale", 0.001, 0.01, 0.1, 1]},
+  "plots": {"enabled": true, "grid_size": 180},
+  "origin": {"interop_dll": "D:/origin2021/Interop.Origin.dll", "executable": "D:/origin2021/Origin64.exe"},
+  "datasets": [
+    {
+      "key": "species",
+      "title": "不同种类分类",
+      "source": {"type": "table", "path": "YOUR_DATA.xlsx", "sheet": "Species", "header_row": 0},
+      "orientation": "samples_in_rows",
+      "input_kind": "raw_features",
+      "sample_id_column": "Sample_ID",
+      "label_column": "PFAS_Type",
+      "preparation_group_column": "Preparation_ID",
+      "feature_columns": ["300 nm", "400 nm", "500 nm", "600 nm", "700 nm", "800 nm"],
+      "feature_selection_basis": "PLACEHOLDER: replace with the actual physical wavelength list and its documented selection basis."
+    },
+    {
+      "key": "concentration",
+      "title": "不同浓度分类",
+      "source": {"type": "table", "path": "YOUR_DATA.xlsx", "sheet": "Concentration", "header_row": 0},
+      "input_kind": "raw_features",
+      "sample_id_column": "Sample_ID",
+      "label_column": "Concentration_Class",
+      "preparation_group_column": "Preparation_ID",
+      "feature_columns": ["300 nm", "400 nm", "500 nm", "600 nm", "700 nm", "800 nm"]
+    },
+    {
+      "key": "ratio",
+      "title": "混合比例分类",
+      "source": {"type": "table", "path": "YOUR_DATA.xlsx", "sheet": "Ratio", "header_row": 0},
+      "input_kind": "raw_features",
+      "sample_id_column": "Sample_ID",
+      "label_column": "Mixture_Ratio",
+      "preparation_group_column": "Preparation_ID",
+      "feature_columns": ["300 nm", "400 nm", "500 nm", "600 nm", "700 nm", "800 nm"]
+    }
+  ]
+}
