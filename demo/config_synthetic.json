@@ -1,0 +1,49 @@
+{
+  "output_root": "synthetic_results",
+  "random_seed": 20261009,
+  "algorithms": [
+    "LDA",
+    "SVM"
+  ],
+  "validation": {
+    "outer_folds": 5,
+    "inner_folds": 4
+  },
+  "preprocessing": {
+    "missing": "error",
+    "scale": "standard",
+    "select_k": null,
+    "pca_components": null
+  },
+  "svm": {
+    "kernel": "rbf",
+    "C_grid": [
+      0.1,
+      1
+    ],
+    "gamma_grid": [
+      "scale"
+    ]
+  },
+  "plots": {
+    "enabled": false
+  },
+  "datasets": [
+    {
+      "key": "synthetic",
+      "title": "SYNTHETIC SOFTWARE DEMO ONLY",
+      "source": {
+        "type": "table",
+        "path": "synthetic_demo.csv"
+      },
+      "sample_id_column": "Sample_ID",
+      "label_column": "True_Class",
+      "feature_columns": [
+        "Feature_1",
+        "Feature_2",
+        "Feature_3",
+        "Feature_4"
+      ]
+    }
+  ]
+}

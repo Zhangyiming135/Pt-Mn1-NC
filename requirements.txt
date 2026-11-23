@@ -1,5 +1,4 @@
-# Dependencies evidenced by the available software tests.
-# Verify the full runtime dependency list once ml_general.py is available.
 numpy
 pandas
 openpyxl
+scikit-learn>=1.2
