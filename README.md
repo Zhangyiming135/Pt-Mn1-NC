@@ -54,4 +54,4 @@ The original templates and tests are retained. Native Origin project I/O, the Or
 
 ## Manuscript reproduction and license
 
-Reproducing the manuscript requires the actual input files, their mappings to the figures and tables, and a verified historical analysis workflow. The synthetic demo is a software example only. The code license is pending confirmation by the rights holders.
+Reproducing the manuscript requires the actual input files, their mappings to the figures and tables, and a verified historical analysis workflow. The synthetic demo is a software example only. The code in this repository is released under the MIT License. See LICENSE for details.
